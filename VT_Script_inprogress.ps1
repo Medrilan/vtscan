@@ -7,7 +7,7 @@ do {
     $headers.Add("x-apikey", "$key")
     Function Validate-API {
 	    try{
-		    $validation=Invoke-Webrequest -URI $link -Method GET $headers -UseBasicParsing -EA Stop
+		    $validation=Invoke-Webrequest -URI $link -Method GET -Headers $headers -UseBasicParsing -EA Stop
 	    return 1}
 	    catch {
 	    return 0}
