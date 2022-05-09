@@ -2,7 +2,7 @@
 #If the API key is invalid or the file hash entered is unkown to VirusTotal, the script will loop back and allow re-entry of a key and hash value.# 
 
 Write-Host "To request a report on a file hash, you will need a Virus Total API key. If you do not have a key, please visit https://www.virustotal.com/gui/my-apikey and sign up for a free account."
-#The script is wrapped in a do-while loop that allows continues restarts at the end of a hash check.#
+#The script is wrapped in a do-while loop that allows continuous restarts at the end of a hash check.#
 do{
     #The nested do-while loop contains the validation process.#
     do{
