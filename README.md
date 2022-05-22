@@ -1,5 +1,5 @@
 # vtscan
-Simple powershell script to call the Virus Total API and check a file has for reported malicious behavior. 
+Simple powershell script to call the Virus Total API and check a file hash for reported malicious behavior. 
 
 Use of this script requires an API Key from Virus Total. 
 If you do not have a key, please go to https://www.virustotal.com/gui/join-us. Create a free account, then go to https://www.virustotal.com/gui/my-apikey to locate your key.
