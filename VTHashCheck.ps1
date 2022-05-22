@@ -13,7 +13,7 @@ do{
         $headers=@{}
         $headers.Add("Accept","application/json")
         $headers.Add("x-apikey", "$key")
-        #To make the end user experience more streamlines, I make an API call with the given key to the location of the file hash.#
+        #To make the end user experience more streamlined, I make an API call with the given key to the location of the file hash.#
             try{
             ($response=Invoke-WebRequest -URI $link -Method GET -Headers $headers | Select-Object -ExpandProperty Content -ErrorAction Stop).BaseResponse
             Write-Host $response.StatusCode
@@ -22,7 +22,7 @@ do{
                 Write-Verbose "error $($_.Exception.Message)"
                 $status=$_.Exception.Response.StatusCode
             }
-        #Here I'm using the response from out validation API call to provide feedback on errors or successful calls.#
+        #Here I'm using the response from our validation API call to provide feedback on errors or successful calls.#
         If ($status -eq "NotFound"){Write-Output "File not found. Either the hash is invalid, or VirusTotal has not seen this file before. (404)"}
         ElseIf ($status -eq "Unauthorized"){Write-Output "Invalid API key. Please try again. (401)"}
         Else {Write-Output "Valid API key and hash value. Generating report..."}
